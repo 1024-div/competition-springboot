@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Ljj.Mapper.OrgMapper">
+
+    <resultMap id="BaseResultMap" type="com.Ljj.Entity.Organization">
+        <result column="org_id" jdbcType="INTEGER" property="org_id" />
+        <result column="org_name" jdbcType="VARCHAR" property="org_name" />
+        <result column="org_pwd" jdbcType="VARCHAR" property="org_pwd" />
+    </resultMap>
+
+    <select id="login" resultType="com.Ljj.Entity.Organization">
+        select * from organization where org_name = #{name} and org_pwd = #{pwd}
+    </select>
+
+</mapper>
