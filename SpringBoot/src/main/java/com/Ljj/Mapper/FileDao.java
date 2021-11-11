@@ -22,6 +22,12 @@ public interface FileDao {
     int save(File file);
 
     /**
+     * 获取文件在数据库中信息
+     * @param file
+     * @return
+     */
+    File getId(File file);
+    /**
      * 更新一行数据
      * @param file
      * @return

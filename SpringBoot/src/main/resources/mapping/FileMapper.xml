@@ -21,6 +21,10 @@
         where id = #{id}
     </select>
 
+    <select id="getId" parameterType="com.Ljj.Entity.File" resultMap="BaseResultMap">
+        select * from file where name=#{name} and md5=#{md5} and path=#{path} and upload_time=#{uploadTime}
+    </select>
+
     <insert id="save" parameterType="com.Ljj.Entity.File" keyProperty="id" useGeneratedKeys="true">
         insert into file(name,md5,path,upload_time) values(#{name},#{md5},#{path},#{uploadTime})
     </insert>

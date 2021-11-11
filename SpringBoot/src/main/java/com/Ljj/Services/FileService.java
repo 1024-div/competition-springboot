@@ -28,12 +28,14 @@ public class FileService {
      * @param md5
      * @param file
      */
-    public void upload(String name,
+    public File upload(String name,
                        String md5,
                        MultipartFile file) throws IOException {
         String path = UploadConfig.path + generateFileName();
         FileUtils.write(path, file.getInputStream());
-        fileDao.save(new File(name, md5, path, new Date()));
+        File uploadfile = new File(name, md5, path, new Date());
+        fileDao.save(uploadfile);
+        return fileDao.getId(uploadfile);
     }
 
     /**

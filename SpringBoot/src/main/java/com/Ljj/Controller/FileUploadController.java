@@ -1,5 +1,6 @@
 package com.Ljj.Controller;
 
+import com.Ljj.Entity.File;
 import com.Ljj.Services.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,11 +21,11 @@ public class FileUploadController {
     @Autowired
     private FileService fileService;
 
-    @PostMapping("/")
-    public void upload(String name,
+    @PostMapping("/uploadFile")
+    public File upload(String name,
                        String md5,
                        MultipartFile file) throws IOException {
-        fileService.upload(name, md5,file);
+        return fileService.upload(name, md5,file);
     }
 }
 
