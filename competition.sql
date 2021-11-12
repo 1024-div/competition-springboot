@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2021-11-11 17:11:11
+Date: 2021-11-12 17:50:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -110,11 +110,11 @@ INSERT INTO `match_category` VALUES ('31', '球类赛事', '7');
 INSERT INTO `match_category` VALUES ('32', '游戏大赛', '7');
 
 -- ----------------------------
--- Table structure for `match_infor`
+-- Table structure for `match_info`
 -- ----------------------------
-DROP TABLE IF EXISTS `match_infor`;
-CREATE TABLE `match_infor` (
-  `match_infor_id` int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `match_info`;
+CREATE TABLE `match_info` (
+  `match_info_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
   `mode_id` int(11) DEFAULT NULL,
   `level_id` int(11) DEFAULT NULL,
@@ -134,12 +134,12 @@ CREATE TABLE `match_infor` (
   `over_time` datetime NOT NULL,
   `files` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `match_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`match_infor_id`)
+  `match_id` int(11) NOT NULL,
+  PRIMARY KEY (`match_info_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of match_infor
+-- Records of match_info
 -- ----------------------------
 
 -- ----------------------------
