@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.xml.crypto.dsig.DigestMethod;
 import java.nio.charset.StandardCharsets;
-
+/**
+ * 组织管理
+ */
 @RestController
 @RequestMapping("org")
 public class OrgController {

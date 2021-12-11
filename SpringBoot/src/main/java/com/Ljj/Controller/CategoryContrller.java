@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+/**
+ *赛事分类管理
+ */
 @RestController
 @RequestMapping("/Category")
 public class CategoryContrller {

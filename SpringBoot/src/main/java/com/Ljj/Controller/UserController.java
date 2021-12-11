@@ -5,6 +5,9 @@ import com.Ljj.Services.Impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 普通用户管理
+ */
 @RestController
 @RequestMapping("/user")
 public class UserController {
